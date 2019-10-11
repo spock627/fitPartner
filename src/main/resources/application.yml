@@ -1,0 +1,24 @@
+##日志打印,配置完日志文件后控制台可以看到打印sql语句,很有用，方便查看自己sql语句是否有错
+logging:
+  level:
+    com.changan.stumgr.mapper.*: debug
+#公共配置与profiles选择无关
+mybatis:
+  typeAliasesPackage: com.changan.stumgr.pojo
+  mapperLocations: classpath:mapper/*.xml
+  ##数据库连接的配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.105.191.233:3306/gym?useUnicode=true&characterEncoding=UTF-8
+    username: diaoyizi
+    password: diaoyizi@niubi666
+##分页插件的配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+##当端口占用时可以修改端口号
+server:
+  port: 8080
