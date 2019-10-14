@@ -1,11 +1,19 @@
 package com.gym.controller;
 
+import com.gym.model.gym.GymBean;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  * business:健身任务相关业务
  * Author:easy
  * Date:19/10/11 下午8:15
  */
 
+@RestController
 public class FitController {
 
     //获取当前健身房的任务订单
@@ -20,6 +28,14 @@ public class FitController {
 
     //获取某个订单信息
     public void getOrderInfo() {
+
+    }
+
+    @RequestMapping(value = "/addOrder",method = RequestMethod.GET)
+    @ApiOperation(value="生成订单", notes="添加新的订单")
+    public void addOrder(@RequestParam("gymBean") GymBean gymBean) {
+
+
 
     }
 } 
