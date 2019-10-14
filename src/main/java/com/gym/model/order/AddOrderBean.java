@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 @Builder
-public class OrderBean {
+public class AddOrderBean {
 
     private String userId;
     private String gymId;
@@ -19,7 +19,6 @@ public class OrderBean {
     private String startTime;
     private String endTime;
     private String content;
-    private String receiveId;
-    private String receiveTime;
     private int type;
+    private int status;
 } 

@@ -1,6 +1,6 @@
 package com.gym.service;
 
-import com.gym.model.order.OrderBean;
+import com.gym.model.order.AddOrderBean;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OperationOrderService {
 
-    public boolean addOrder(OrderBean orderBean) {
+    public boolean addOrder(AddOrderBean orderBean) {
 
         return true;
     }
