@@ -20,6 +20,6 @@ public interface  OrderDao {
     void saveOrder(AddOrderBean addOrderBean);
 
 
-    @Update("update `gym`.fit_order set receive_id = #{receive_id}, receive where user_id = #{to_user_id} and to_user_id = #{user_id}")
+    @Update("update `gym`.fit_order set receive_id = #{receive_id},status= #{status} where id = #{id}")
     void updateOrder(ReceiveOrderBean receiveOrderBean);
 } 

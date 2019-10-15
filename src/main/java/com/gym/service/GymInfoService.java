@@ -5,6 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.gym.dao.GymInfoDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Map;
  * @Date 2019/10/12 下午4:05
  **/
 
-@Component
+@Service
 public class GymInfoService {
 
     @Autowired
