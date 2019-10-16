@@ -40,6 +40,7 @@ public class SwaggerConfig {
         };
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
+                .host("www.easy13.cn")
                 .useDefaultResponseMessages(false)
                 .select()
                 .apis(predicate)
@@ -48,7 +49,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("健身房1带1服务api接口")//大标题
+                .title("FitPartner")//大标题
                 .version("1.0")//版本
                 .build();
     }
