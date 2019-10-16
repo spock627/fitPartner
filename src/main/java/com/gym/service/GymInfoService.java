@@ -2,9 +2,8 @@ package com.gym.service;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.gym.dao.GymInfoDao;
+import com.gym.dao.GymDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +20,7 @@ import java.util.Map;
 public class GymInfoService {
 
     @Autowired
-    private GymInfoDao gymInfoDao;
+    private GymDao gymInfoDao;
 
     public List<Map<String,Object>> findAllGymInfo(){
         return gymInfoDao.findAllGymInfo();

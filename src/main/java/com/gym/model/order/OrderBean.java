@@ -8,16 +8,18 @@ import lombok.Data;
  * Date:19/10/14 下午6:19
  */
 @Data
-public class AddOrderBean {
+public class OrderBean {
 
-    private int id;
+    private Integer id;
     private String userId;
     private String gymId;
-    private double price;
+    private Double price;
     private String createTime;
     private String startTime;
     private String endTime;
     private String content;
-    private int type;
-    private int status;
+    private String receiveId;
+    private String receiveTime;
+    private Integer type;
+    private Integer status;
 } 

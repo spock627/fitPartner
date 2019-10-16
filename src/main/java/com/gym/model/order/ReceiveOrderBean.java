@@ -9,7 +9,6 @@ import lombok.Data;
  * Date:19/10/14 下午6:19
  */
 @Data
-@Builder
 public class ReceiveOrderBean {
     private int id;
     private String receiveId;
