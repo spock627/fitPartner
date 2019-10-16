@@ -1,13 +1,11 @@
 package com.gym.controller;
 
-import com.gym.model.gym.GymBean;
 import com.gym.model.order.AddOrderBean;
 import com.gym.model.order.GymOrderListResponseBean;
-import com.gym.model.order.PlatformResponse;
+import com.gym.model.util.PlatformResponse;
 import com.gym.model.order.ReceiveOrderBean;
 import com.gym.service.OperationOrderService;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

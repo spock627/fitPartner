@@ -40,7 +40,7 @@ public class SwaggerConfig {
         };
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
-                .host("www.easy13.cn")
+                //.host("www.easy13.cn")
                 .useDefaultResponseMessages(false)
                 .select()
                 .apis(predicate)

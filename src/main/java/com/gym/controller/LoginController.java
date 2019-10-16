@@ -1,15 +1,15 @@
 package com.gym.controller;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.github.pagehelper.Page;
+import com.gym.model.login.WeixinLoginRequest;
+import com.gym.model.login.WeixinLoginResponse;
+import com.gym.model.util.PlatformRequest;
+import com.gym.model.util.PlatformResponse;
 import com.gym.service.GymInfoService;
 import com.gym.util.PageUtils;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -33,4 +33,17 @@ public class LoginController {
         Page ret = gymInfoService.findAllGymInfo2Page(start,limit);
         return new PageUtils(ret);
     }
+
+
+//    @ApiOperation(value = "微信登录")
+//    @RequestMapping(path = "/loginByWX", method = RequestMethod.POST)
+//    public @ResponseBody
+//    PlatformResponse<Object> loginByWX(@RequestBody PlatformRequest<WeixinLoginRequest> platformRequest) {
+//        WeixinLoginRequest request = platformRequest.getRequest();
+//        WeixinLoginResponse login = weChatMiniLogic.login(request.getCode(), request.getEncryted(), request.getIv());
+//        return new PlatformResponse<Object>() {{
+//            setData(login);
+//            success();
+//        }};
+//    }
 }

@@ -1,4 +1,4 @@
-package com.gym.model.order;
+package com.gym.model.util;
 
 
 import com.gym.constans.CommonConstants;
