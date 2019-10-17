@@ -12,8 +12,6 @@ import org.springframework.stereotype.Component;
 @Log4j2
 @Component
 public class LoginService {
-    @Autowired
-    private ApiWrapper apiWrapper;
 
 
 

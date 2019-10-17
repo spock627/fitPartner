@@ -3,6 +3,7 @@ package com.gym.service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.gym.dao.GymDao;
+import com.gym.model.gym.GymBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,13 +18,13 @@ import java.util.Map;
  **/
 
 @Service
-public class GymInfoService {
+public class GymService {
 
     @Autowired
-    private GymDao gymInfoDao;
+    private GymDao gymDao;
 
     public List<Map<String,Object>> findAllGymInfo(){
-        return gymInfoDao.findAllGymInfo();
+        return gymDao.findAllGymInfo();
     }
 
     /**
@@ -35,6 +36,15 @@ public class GymInfoService {
      **/
     public Page findAllGymInfo2Page(int start, int limit){
         PageHelper.startPage(start,limit);
-        return (Page)gymInfoDao.findAllGymInfo();
+        return (Page)gymDao.findAllGymInfo();
+    }
+
+    /**
+     * 获取附近的健身房
+     * @return
+     */
+    public List<GymBean> getNearbyGymList() {
+        List<GymBean> gymList = gymDao.getNearbyGymList();
+        return gymList;
     }
 }

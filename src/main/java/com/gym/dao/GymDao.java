@@ -29,4 +29,6 @@ public interface GymDao {
     @Select("select * from `gym`.recommend_gym where id = #{gymId}")
     GymBean  getGymInfo(String gymId);
 
+    @Select("select * from recommend_gym where name like \"SUPER%\"")
+    List<GymBean> getNearbyGymList();
 }

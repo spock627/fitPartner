@@ -1,11 +1,7 @@
 package com.gym.controller;
 
 import com.github.pagehelper.Page;
-import com.gym.model.login.WeixinLoginRequest;
-import com.gym.model.login.WeixinLoginResponse;
-import com.gym.model.util.PlatformRequest;
-import com.gym.model.util.PlatformResponse;
-import com.gym.service.GymInfoService;
+import com.gym.service.GymService;
 import com.gym.util.PageUtils;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +14,7 @@ import java.util.Map;
 public class LoginController {
 
     @Autowired
-    private  GymInfoService gymInfoService;
+    private GymService gymInfoService;
 
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     @ApiOperation(value="测试接口", notes="登陆接口")
